@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/static/assets/css/main.css" />
+    {% load markdown_deux_tags %}
+    {% markdown_allowed %}
 </head>
 <body>
 
@@ -39,44 +41,12 @@
                   <header>
                       <h3>{{blog.title}}</h3>
                   </header>
-                  <p>{{blog.content}}</p>
+                  <p>{{ blog.content|markdown:"STYLE" }}</p>
             </article>
           </div>
       </div>
   </section>
 {% endfor %}
-
-<!--
-<section id="one" class="wrapper">
-    <div class="inner">
-        <div class="flex flex-12">
-            <article>
-                <header>
-                    <h3>blog 2</h3>
-                </header>
-                <p>five years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universi
-                </p>
-
-            </article>
-        </div>
-    </div>
-</section>
-
-<section id="two" class="wrapper style1 special">
-    <div class="inner">
-        <div class="flex flex-12">
-            <article>
-                <header>
-                    <h3>blog 2</h3>
-                </header>
-                <p>five years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universifive years (summer 2016) I see myself have graduated from San Diego State Universi
-                </p>
-
-            </article>
-        </div>
-    </div>
-</section>
--->
 
 <section id="three" class="wrapper special">
     <div class="inner">
@@ -108,7 +78,6 @@
                 <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
                 <li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
                 <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-
             </ul>
         </div>
     </div>
@@ -120,6 +89,5 @@
 <script src="/static/assets/js/skel.min.js"></script>
 <script src="/static/assets/js/util.js"></script>
 <script src="/static/assets/js/main.js"></script>
-
 </body>
 </html>

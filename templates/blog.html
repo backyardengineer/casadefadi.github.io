@@ -27,7 +27,26 @@
     <p>-Neil Armstrong</p>
 </section>
 
-<!-- One -->
+{% for blog in blogs %}
+  {% if forloop.counter|divisibleby:2 %}
+    <section id="two" class="wrapper">
+  {% else %}
+    <section id="two" class="wrapper style1 special">
+  {% endif %}
+      <div class="inner">
+          <div class="flex flex-12">
+              <article>
+                  <header>
+                      <h3>{{blog.title}}</h3>
+                  </header>
+                  <p>{{blog.content}}</p>
+            </article>
+          </div>
+      </div>
+  </section>
+{% endfor %}
+
+<!--
 <section id="one" class="wrapper">
     <div class="inner">
         <div class="flex flex-12">
@@ -43,7 +62,6 @@
     </div>
 </section>
 
-<!-- Two -->
 <section id="two" class="wrapper style1 special">
     <div class="inner">
         <div class="flex flex-12">
@@ -58,8 +76,8 @@
         </div>
     </div>
 </section>
+-->
 
-<!-- Three -->
 <section id="three" class="wrapper special">
     <div class="inner">
         <header>

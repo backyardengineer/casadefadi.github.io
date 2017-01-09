@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/static/assets/css/main.css" />
     {% load markdown_deux_tags %}
-    {% markdown_allowed %}
 </head>
 <body>
 
@@ -41,6 +40,7 @@
                   <header>
                       <h3>{{blog.title}}</h3>
                   </header>
+                  <p>{{ blog.content }}</p>
                   <p>{{ blog.content|markdown:"STYLE" }}</p>
             </article>
           </div>

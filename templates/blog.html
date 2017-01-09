@@ -40,9 +40,7 @@
                   <header>
                       <h3>{{blog.title}}</h3>
                   </header>
-                  {% markdown STYLE %}
-                    {{ blog.content }}
-                  {% endmarkdown %}
+                  <p>{{ blog.content|markdown }}</p>
             </article>
           </div>
       </div>
